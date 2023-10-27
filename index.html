@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <!-- Font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <title>Exercises JavaScript - 3</title>
+    <!-- Adding favicon -->
+    <link rel="icon" href="images/icons8-source-code-96.png" type="image/png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">homework - JavaScript 3</h2>
+
+        <!-- Enter array numbers -->
+        <div class="card array">
+            <div class="card-header">
+                Array of Numbers
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <span class="input-group-text">Enter your numbers</span>
+                    <input type="number" id="number" aria-label="number" class="form-control">
+                    <button onclick="addArray()">Add number</button>
+                  </div>
+            </div>
+            <div class="card-footer">
+                <div class="array-output">
+                    <i class="fa fa-angle-double-right"></i>
+                    <span id="array-result"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 1 -->
+        <div class="card ex1">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse1">
+                <i class="fa fa-code"></i>
+                Exercise 1 - Sum of positive numbers
+            </div>
+            <div class="collapse" id="collapse1">
+                <div class="card-body">
+                    <button onclick="calculateSum()">Sum</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex1-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex1-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 2 -->
+        <div class="card ex2">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse2">
+                <i class="fa fa-code"></i>
+                Exercise 2 - Count the positive numbers
+            </div>
+            <div class="collapse" id="collapse2">
+                <div class="card-body">
+                    <button onclick="countNumbers()">Count</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex2-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex2-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 3 -->
+        <div class="card ex3">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse3">
+                <i class="fa fa-code"></i>
+                Exercise 3 - Find the smallest number
+            </div>
+            <div class="collapse" id="collapse3">
+                <div class="card-body">
+                    <button onclick="findSmallest()">Find</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex3-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex3-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 4 -->
+        <div class="card ex4">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse4">
+                <i class="fa fa-code"></i>
+                Exercise 4 - Find the smallest positive number
+            </div>
+            <div class="collapse" id="collapse4">
+                <div class="card-body">
+                    <button onclick="findSmallestPositive()">Find</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex4-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex4-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 5 -->
+        <div class="card ex5">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse5">
+                <i class="fa fa-code"></i>
+                Exercise 5 - Find the last even number 
+            </div>
+            <div class="collapse" id="collapse5">
+                <div class="card-body">
+                    <button onclick="findEvenNum()">Find</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex5-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex5-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 6 -->
+        <div class="card ex6">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse6">
+                <i class="fa fa-code"></i>
+                Exercise 6 - Change the position of two values  
+            </div>
+            <div class="collapse" id="collapse6">
+                <div class="card-body">
+                    <div class="row input-group">
+                        <div class="col-6 input-item">
+                            <input type="number" id="firstPo" placeholder="Enter the first position">
+                        </div>
+                        <div class="col-6 input-item">
+                            <input type="number" id="secondPo" placeholder="Enter the second position">
+                        </div>
+                    </div>
+                    <button onclick="changePosition()">Change</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex6-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex6-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 7 -->
+        <div class="card ex7">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse7">
+                <i class="fa fa-code"></i>
+                Exercise 7 - Arrange numbers in ascending order 
+            </div>
+            <div class="collapse" id="collapse7">
+                <div class="card-body">
+                    <button onclick="orderNumbers()">Order</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex7-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex7-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 8 -->
+        <div class="card ex8">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse8">
+                <i class="fa fa-code"></i>
+                Exercise 8 - Find the first prime number 
+            </div>
+            <div class="collapse" id="collapse8">
+                <div class="card-body">
+                    <button onclick="findPrime()">Find</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex8-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex8-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 9 -->
+        <div class="card ex9">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse9">
+                <i class="fa fa-code"></i>
+                Exercise 9 - Count the integer numbers  
+            </div>
+            <div class="collapse" id="collapse9">
+                <div class="card-body">
+                    <button onclick="countInteger()">Count</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex9-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex9-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise 10 -->
+        <div class="card ex10">
+            <div class="card-header" data-bs-toggle="collapse" href="#collapse10">
+                <i class="fa fa-code"></i>
+                Exercise 10 - Compare the number of positive and negative numbers 
+            </div>
+            <div class="collapse" id="collapse10">
+                <div class="card-body">
+                    <button onclick="compareNumbers()">Compare</button>
+                </div>
+                <div class="card-footer">
+                    <h5>Result</h5>
+                    <p class="ex10-result">
+                        <i class="fa fa-hand-point-right"></i>
+                        <span id="ex10-output" class="output"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
